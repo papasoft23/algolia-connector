@@ -1,4 +1,5 @@
-export default async function handler() {
+import { NextResponse } from 'next/server';
+export async function GET() {
 
     const url = 'https://api.europe-west1.gcp.commercetools.com/ct-manitou-b2b-sales-demo/products';
     const bearerToken = 'DXFIJOtCqkbHVrZRBIgIQqE5Np9E2w6_'; // Replace with your actual Bearer token
@@ -19,9 +20,5 @@ export default async function handler() {
     console.log(data.results);
 
 
-    return (
-        <div>
-            {JSON.stringify(data.results)}
-        </div>
-    )
+    return NextResponse.json(data.results);
 }
