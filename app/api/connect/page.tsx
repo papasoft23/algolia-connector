@@ -1,6 +1,4 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-
-export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
+export default async function handler() {
 
     const url = 'https://api.europe-west1.gcp.commercetools.com/ct-manitou-b2b-sales-demo/products';
     const bearerToken = 'DXFIJOtCqkbHVrZRBIgIQqE5Np9E2w6_'; // Replace with your actual Bearer token
